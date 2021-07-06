@@ -1,0 +1,236 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.examples {
+  padding: 2rem;
+}
+
+.examples > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+  list-style: none;
+}
+
+.examples > ul > li {
+  border: 1px solid #e2e2e2;
+  border-radius: 0.5rem;
+}
+
+.examples > ul > li > figure {
+  max-height: 250px;
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  position: relative;
+}
+
+.examples > ul > li > figure > div {
+  width: 100%;
+}
+
+.examples > ul > li > h2 {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem 0.75rem;
+  color: #666666;
+}
+
+#transitionObject {
+  animation: transite 5s ease-out infinite;
+  background: #37a1d9;
+  width: 14em;
+  height: 14em;
+  border: 0em;
+  position: relative;
+  left: calc(50% - 7em);
+  top: calc(50% - 8em);
+  border-radius: 2em;
+}
+
+@keyframes transite {
+  0% {
+    border-radius: 0;
+    background-color: #37a1d9;
+  }
+  40%,
+  60% {
+    border-radius: 50%;
+    background-color: #00e7c8;
+  }
+  100% {
+    border-radius: 0;
+    background-color: #37a1d9;
+  }
+}
+
+/* transition button */
+#transitionButton {
+  width: 16em;
+  height: 16em;
+}
+button {
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-out;
+}
+button {
+  background: whitesmoke;
+  border: 0px solid #fff;
+  border-radius: 1em;
+  color: rgb(43, 43, 43);
+  cursor: pointer;
+  font-size: 24px;
+  font: Helvetica, Arial, Sans-serif;
+  padding: 1em;
+}
+button:hover {
+  background: #37a1d9;
+  color: #fff;
+  font-size: 28px;
+}
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Text transition */
+@keyframes typing {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+#textTransition {
+  height: 500px;
+}
+
+.letterContainer {
+  position: relative;
+  font-family: Consolas, monospace;
+}
+
+.typing {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  z-index: -1;
+}
+
+.hiders {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.hiders p {
+  position: relative;
+  clear: both;
+  margin: 0;
+  float: right; /* makes animation go left-to-right */
+  width: 0; /* graceful degradation: if animation doesn't work, these are invisible by default */
+  background: white; /* same as page background */
+  animation: typing 2s steps(30, end);
+  animation-fill-mode: both; /* load first keyframe on page load, leave on last frame at end */
+}
+
+.hiders p:nth-child(2) {
+  animation-delay: 2s;
+}
+.hiders p:nth-child(3) {
+  animation-delay: 4s;
+}
+.hiders p:nth-child(4) {
+  animation-delay: 6s;
+}
+.hiders p:nth-child(5) {
+  animation-delay: 8s;
+}
+
+/* Flying Birds */
+/* #flyingBirds {
+  position: relative;
+  top: 5em;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+  max-width: 60rem;
+  background-image: url("https://cdn.pixabay.com/photo/2013/07/18/10/56/railroad-163518_1280.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.bird {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+  background-size: auto 100%;
+  width: 88px;
+  height: 125px;
+  will-change: background-position;
+  animation-name: fly-cycle;
+  animation-timing-function: steps(10);
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-delay: -0.5s;
+}
+
+.bird-letter-container {
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  transform: scale(0) translateX(-10vw);
+  will-change: transform;
+  animation-name: fly-right-one;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+  animation-delay: 0;
+}
+
+@keyframes fly-cycle {
+  100% {
+    background-position: -900px 0;
+  }
+}
+
+@keyframes fly-right-one {
+  0% {
+    transform: scale(0.3) translateX(-10vw);
+  }
+
+  10% {
+    transform: translateY(2vh) translateX(10vw) scale(0.4);
+  }
+
+  20% {
+    transform: translateY(0vh) translateX(30vw) scale(0.5);
+  }
+
+  30% {
+    transform: translateY(4vh) translateX(50vw) scale(0.6);
+  }
+
+  40% {
+    transform: translateY(2vh) translateX(70vw) scale(0.6);
+  }
+
+  50% {
+    transform: translateY(0vh) translateX(90vw) scale(0.6);
+  }
+
+  60% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+
+  100% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+} */

@@ -5,42 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=PT+Sans&display=swap" rel="stylesheet">
+
     <title>CSS animations</title>
   </head>
   <body>
-     <!--  <h1>CSS animations</h1> -->
+    <article>
+      <h1>
+        CSS Animations
+      </h1>
+      <p>
+        pure CSS
+      </p>
+    </article>
+     
       <section class="examples">
         <ul>
           <li>
             <h2>Object Transition</h2>
-            <figure>  
-               <div id="transitionObject"></div>
-            </figure>
+               <div class="transitionObject"></div>
           </li>
           <li>
-            <h2>Button Transition</h2>
-            <figure>
-               <div id="transitionButton">
+            <h2>Hover animation</h2>
+               <div class="transitionButton">
                 <button>Hover me!</button>
                </div>
-            </figure>
           </li>
-          <li>
-            <h2>Text Transition</h2>
-            <figure>
-              <!-- <div id="textTransition">
+          <li class="index">
+            <h2>Typewriter effect</h2>
+            <p>( Reload for animation )</p>
+          
+              <div class="textTransition">
                 <div class="letterContainer">
                   <p class="typing">
-                    This paragraph of text will be animated with a "typewriter" style
-                    effect, and it will continue to work even if it splits across
-                    multiple lines. Well, in this case, up to a maximum of 5 lines, but
-                    you get the picture.
+                    Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit, 
+                    sed do eiusmod tempor 
+                    incididunt ut labore et 
+                    dolore magna aliqua. 
                   </p>
         
                   <div class="hiders">
@@ -49,39 +53,35 @@
                     <p>&nbsp;</p>
                     <p>&nbsp;</p>
                     <p>&nbsp;</p>
-                    <p>&nbsp;</p>
                   </div>
                 </div>
-              </div> -->
-            </figure>
+              </div> 
+          
           </li>
         </ul>
       </section>
- 
-      <div id="textTransition">
-        <div class="letterContainer">
-          <p class="typing">
-            This paragraph of text will be animated with a "typewriter" style
-            effect, and it will continue to work even if it splits across
-            multiple lines. Well, in this case, up to a maximum of 5 lines, but
-            you get the picture.
-          </p>
+      <section>
+        <ul>
+          <li>
+            <h2>Flying Birds</h2>
+            <div class="flyingBirds">
+              <div class="bird-container bird-container--one">
+                <div class="bird bird--one"></div>
+              </div>
+              <div class="bird-container bird-container--two">
+                <div class="bird bird--two"></div>
+              </div>
+              <div class="bird-container bird-container--three">
+                <div class="bird bird--three"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-          <div class="hiders">
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-          </div>
-        </div>
-      </div>
-      <!-- <div id="flyingBirds">
-        <div class="bird-letter-container">
-          <div class="bird"></div>
-        </div>
-      </div> --> 
+      <!-- <div id="transitionButton">
+        <button>Hover me!</button>
+       </div> -->
     </main>
   </body>
 </html>

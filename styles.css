@@ -20,8 +20,8 @@ article > p {
 }
 
 h1 {
-  font-size: 7rem;
-  letter-spacing: 1.4rem;
+  font-size: 8vw;
+  letter-spacing: 4vw;
   line-height: 1.1;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -101,6 +101,9 @@ p {
 .transitionButton {
   height: 16em;
   width: 16em;
+  left: calc(50% - 7em);
+  position: relative;
+  top: calc(50% - 10em);
 }
 
 button {
@@ -110,10 +113,10 @@ button {
   color: rgb(43, 43, 43);
   cursor: pointer;
   font-size: 24px;
-  left: 75%;
-  padding: 1em;
+  left: calc(50% - 0.5em);
   position: relative;
-  top: 50%;
+  top: calc(50% - 1em);
+  padding: 1em;
   transform: translate(-50%, -50%);
 
   /*animation*/
@@ -192,19 +195,29 @@ button:hover {
 .hiders p:nth-child(5) {
   animation-delay: 8s;
 }
+.hiders p:nth-child(6) {
+  animation-delay: 10s;
+}
 
 /* Flying Birds */
 .flyingBirds {
   align-items: center;
-  background-image: url("https://cdn.pixabay.com/photo/2013/07/18/10/56/railroad-163518_1280.jpg");
+  background-image: linear-gradient(
+      90deg,
+      rgba(55, 161, 217, 0.3118289552148985) 0%,
+      rgba(0, 231, 200, 0.16336957146139708) 52%,
+      rgba(55, 161, 217, 0.24180094401041663) 100%
+    ),
+    url("https://cdn.pixabay.com/photo/2018/04/16/16/16/sunset-3325080_1280.jpg");
   background-position: center center;
   background-size: cover;
   border-radius: 0.4rem;
   display: flex;
   justify-content: center;
   margin: 10px;
-  min-height: 15rem;
-  min-width: 60rem;
+  min-height: 20rem;
+  min-width: 10rem;
+  max-width: 200rem;
   overflow: hidden;
   position: relative;
 }
@@ -298,4 +311,17 @@ button:hover {
   100% {
     transform: translateY(0vh) translateX(110vw) scale(0.6);
   }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  h1 {
+    font-size: 6vw;
+  }
+
+  section {
+    padding: 0;
+  }
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
